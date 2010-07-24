@@ -6,6 +6,8 @@ Java 1.4 or later
 Ant
 (better) Eclipse (I use elios, but older version should be ok) 
 
+In what follows we assume the reader has a bit of familiarity with LeJOS and Lego NXT technologies.
+
 The code has been tested on Snow Leopard.
 
 
