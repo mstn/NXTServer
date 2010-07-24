@@ -1,0 +1,40 @@
+Requirements
+=============
+
+LeJOS NXJ 0.85
+Java 1.4 or later
+Ant
+(better) Eclipse (I use elios, but older version should be ok) 
+
+The code has been tested on Snow Leopard.
+
+
+Preliminary steps
+=================
+
+Follow the instructions for preparing LeJOS on your system
+http://lejos.sourceforge.net/nxt/nxj/tutorial/Preliminaries/GettingStarted.htm
+
+Configuration
+==============
+
+Modify samples.properties (yes, I have to find a better name) in order to reflect the configuration of your system.
+In particular, you have to change these variables
+nxj.home = home directory for your LeJOS
+nxt.sharedlib.jar = absolute path to the NXTSharedLib.jar file in the lib directory (for some reason I does not work with relative paths)
+
+Compile and running the server
+===============================
+
+Run ant file samplebuild.xml to compile, link, upload and run NXTServer.
+You must have NXT usb plugged and switched on.
+If everything is ok, you will see "waiting for client" on the LCD screen of your NXT.
+If you want to play with the robot, you can use a Java client we build (see NXTClient).
+
+
+Known Issues
+=============
+
+*Snow Leopard* uses 64-bit JVM. LeJOS works with 32-bit JVM. In order to force the use of 32-bit JVM on Snow Leopard you have to invoke the interpreter as java -d32...
+We patched samplebuild.xml to work with 32-bit. 
+
